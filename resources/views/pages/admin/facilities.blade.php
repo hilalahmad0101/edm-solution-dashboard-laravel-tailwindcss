@@ -1,183 +1,327 @@
 @extends('layouts.auth')
 @section('title')
-    Facilities
+    Facilities Management
 @endsection
 
 @section('content')
     <main class="flex-1 p-4 lg:p-6 overflow-auto">
-        <div class="pt-6 px-6 pb-12">
-            <div class=" text-zinc-900 text-4xl font-bold leading-7">Facilities</div>
-        </div>
-        <div class="">
-            <div class="overflow-x-auto px-6">
-                <table class="w-full min-w-full table table-auto">
-                    <thead class=" bg-white">
-                        <tr>
-                            <th
-                                class="px-6 rounded-l-md py-6 text-left  text-sm font-semibold  text-[#1F3C88] capitalize tracking-wider">
-                                Facility ID
-                            </th>
-                            <th class="px-6 py-6 text-left  text-sm font-semibold  text-[#1F3C88] capitalize tracking-wider">
-                                Name
-                            </th>
-                            <th class="px-6 py-6 text-left  text-sm font-semibold  text-[#1F3C88] capitalize tracking-wider">
-                                Location
-                            </th>
-                            <th
-                                class="px-6 py-6 text-left  text-sm font-semibold  text-[#1F3C88] capitalize tracking-wider">
-                                Status
-                            </th>
-                            <th
-                                class="px-6 rounded-r-md py-6 text-left  text-sm font-semibold  text-[#1F3C88] capitalize tracking-wider">
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white">
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class=" px-8 py-1 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="h-3" />
-                        <tr class="">
-                            <td class="px-6 py-4 rounded-l-md whitespace-nowrap text-sm font-medium text-gray-900">
-                                12221221
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                City hospital;
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Sarah York
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Approved
-                            </td>
-                            <td class="px-6 rounded-r-md py-4 whitespace-nowrap text-sm space-x-2">
-                                <button class="py-1 px-8 cursor-pointer bg-[#B91414] rounded-[50px] text-white">
-                                    Reject
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="flex items-center justify-between pb-6">
+            <div>
+                <div class=" text-zinc-900 text-2xl font-normal leading-7">Facilities Management</div>
+                <div class="font-[Arial] text-[#717182] font-normal text-[16px] leading-[24px] tracking-[0px]">
+                    Oversee facility accounts and their activities
+                </div>
             </div>
+            <div>
+                <x-button title="Add Facility"
+                    icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    ' />
+            </div>
+        </div>
+        <div class="px-6 py-4 space-x-4 border flex items-center justify-between border-[#0000001A] rounded-lg">
+            <div class="relative w-full">
+                <input type="text" placeholder="Search by name or email..."
+                    class="w-full pl-10 bg-[#e9e9ea] pr-4 py-2 border border-[#e9e9ea] rounded-md text-sm focus:outline-none" />
+                <svg class="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="py-6 flex items-center space-x-3">
+            <div class="bg-[#ECECF0] p-1.5 space-x-1 w-[330px] rounded-full flex items-center justify-between">
+                <a href="/facilities" class="bg-white py-2 px-7 text-[14px] rounded-full  font-normal text-[#0A0A0A]">
+                    All Facilities
+                </a>
+                <a href="/pending-facilities" class=" py-2 px-7 text-[14px] rounded-full  font-normal text-[#0A0A0A]">
+                    Pending Approvals
+                </a>
+            </div>
+            <div class="text-[#894B00] bg-[#FEF9C2] px-2 rounded-lg">
+                1
+            </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="overflow-x-auto mt-6 border border-[#0000001A] rounded-lg bg-white p-6">
+            <div class="mb-6">
+                <h2 class="text-[16px] font-normal text-gray-800">Facility List (5)</h2>
+            </div>
+            <table class="w-full table table-auto">
+                <thead class=" border-b border-[#0000001A]">
+                    <tr>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            ID
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Facility Name
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Contact Person
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Phone
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Location
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Status
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Active Shifts
+                        </th>
+                        <th class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class=" ">
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                    <tr class="border-b border-[#0000001A]">
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            F001
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            General Hospital
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            Dr. Robert Smith
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            +1-555-0123
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            New York, NY
+                        </td>
+                        <td class="px-3 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <div class="bg-[#DCFCE7] px-2 text-center py-1 text-[#016630] rounded-xl">
+                                Active
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 text-left text-[15px] font-medium text-[#717182] capitalize tracking-wider">
+                            12
+                        </td>
+                        <td
+                            class="px-6 py-3 flex items-center justify-end text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+                            </svg>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 @endsection

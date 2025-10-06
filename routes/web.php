@@ -11,7 +11,8 @@ Route::view('/forget-password', 'pages.auth.forget-password')->name('pages.forge
 
 Route::view('/dashboard', 'pages.admin.dashboard')->name('pages.dashboard');
 Route::view('/user', 'pages.admin.user')->name('pages.user');
+Route::view('/facilities', 'pages.admin.facilities')->name('pages.facilities');
+Route::view('/pending-facilities', 'pages.admin.pending-facilities')->name('pages.pending-facilities');
 Route::view('/credential', 'pages.admin.credential')->name('pages.credential');
 Route::view('/shifts', 'pages.admin.shifts')->name('pages.shifts');
-Route::view('/facilities', 'pages.admin.facilities')->name('pages.facilities');
 Route::view('/reports', 'pages.admin.reports')->name('pages.reports');

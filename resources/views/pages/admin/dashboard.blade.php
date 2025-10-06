@@ -4,35 +4,43 @@
 @endsection
 
 @section('content')
-    <main class="flex-1 p-4 lg:p-6 overflow-auto">
-        <div class="pt-6 px-6 pb-12">
-            <div class=" text-zinc-900 text-4xl font-bold leading-7">Dashboard</div>
+    <main class="flex-1  p-4 lg:p-6 overflow-auto">
+        <div class="">
+            <div class=" text-zinc-900 text-2xl font-normal leading-7">Dashboard Overview</div>
+            <div class="font-[Arial] text-[#717182] font-normal text-[16px] leading-[24px] tracking-[0px]">Welcome back!
+                Here's your system
+                snapshot</div>
+        </div>
+
+        <div class="my-6 flex items-center space-x-4">
+            <x-outline-button title="Add Facility"
+                icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                ' />
+            <x-outline-button title="Approve User"
+                icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+</svg>' />
+            <x-outline-button title="Resolve Complaint"
+                icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+</svg>' />
+            <x-outline-button title="Post Announcement"
+                icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+</svg>' />
         </div>
         <div class="">
             <!-- Metrics Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="metric-card card-animation bg-blue-500 text-white p-6 rounded-lg shadow-lg">
-                    <div class="self-stretch justify-start text-white text-xl font-normal  leading-7">Pending
-                        Approvals</div>
-                    <div class="self-stretch justify-start text-white text-3xl font-semibold  leading-7 mt-4">32
-                    </div>
-                </div>
-                <div class="metric-card card-animation bg-green-500 text-white p-6 rounded-lg shadow-lg">
-                    <div class="self-stretch justify-start text-white text-xl font-normal  leading-7">Active
-                        Shifts</div>
-                    <div class="self-stretch justify-start text-white text-3xl font-semibold  leading-7 mt-4">124
-                    </div>
-                </div>
-                <div class="metric-card card-animation bg-orange-500 text-white p-6 rounded-lg shadow-lg">
-                    <div class="w-52 justify-start text-white text-xl font-normal  leading-7">Expiring
-                        Credentials</div>
-                    <div class="self-stretch justify-start text-white text-3xl font-semibold  leading-7 mt-4">32
-                    </div>
-                </div>
-                <div class="metric-card card-animation bg-red-500 text-white p-6 rounded-lg shadow-lg">
-                    <div class="self-stretch justify-start text-white text-xl font-normal  leading-7">Disputes</div>
-                    <div class="self-stretch justify-start text-white text-3xl font-semibold  leading-7 mt-4">32</div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+
+                <x-card title="Active Users" count="450" />
+                <x-card title="Active Facilities" count="150" />
+                <x-card title="Open Shifts" count="250" />
+                <x-card title="Completed Shifts" count="156" />
+                <x-card title="Pending Payments" count="28" />
+                <x-card title="Total Revenue" count="$248,560" />
             </div>
 
             <!-- Charts -->

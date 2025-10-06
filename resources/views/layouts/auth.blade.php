@@ -12,12 +12,11 @@
 <body class="bg-[#F4F5F7] font-sans overflow-hidden">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-[300px] bg-[#1F3C88] text-white px-[28px] py-[48px] flex flex-col shadow-lg relative lg:relative lg:translate-x-0 transition-transform duration-300 ease-in-out"
+        <div class="w-[300px] bg-[#1F3C88] text-white p-4 flex flex-col shadow-lg relative lg:relative lg:translate-x-0 transition-transform duration-300 ease-in-out"
             id="sidebar">
             <!-- Logo/Header -->
-            <div class="mb-10">
-                <div
-                    class="text-center justify-start text-white text-2xl font-extrabold  leading-loose tracking-widest">
+            <div class="pb-4">
+                <div class="text-left justify-start text-white text-2xl font-extrabold  leading-loose tracking-widest">
                     EDM Solution</div>
             </div>
 
@@ -50,17 +49,17 @@
                             class="{{ Request::routeIs('pages.user') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">User</span>
                     </a>
 
-                    <!-- Credentials -->
-                    <a href="{{ route('pages.credential') }}"
-                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.credential') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
+                    <!-- Facility -->
+                    <a href="{{ route('pages.facilities') }}"
+                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.facilities') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
                         <div class="w-6 h-6 mr-4 flex items-center justify-center">
-                            <img src="{{ asset('images/Transaction.svg') }}"
-                                class="{{ Request::routeIs('pages.credential') ? 'hidden' : 'block' }} group-hover:hidden" />
-                            <img src="{{ asset('images/black-Transaction.svg') }}"
-                                class="{{ Request::routeIs('pages.credential') ? 'block' : 'hidden' }} group-hover:block" />
+                            <img src="{{ asset('images/UsersFour.svg') }}"
+                                class="{{ Request::routeIs('pages.facilities') ? 'hidden' : 'block' }} group-hover:hidden" />
+                            <img src="{{ asset('images/black-UsersFour.svg') }}"
+                                class="{{ Request::routeIs('pages.facilities') ? 'block' : 'hidden' }} group-hover:block" />
                         </div>
                         <span
-                            class="{{ Request::routeIs('pages.credential') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Credentials</span>
+                            class="{{ Request::routeIs('pages.facilities') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Facility</span>
                     </a>
 
                     <!-- Shifts -->
@@ -76,18 +75,7 @@
                             class="{{ Request::routeIs('pages.shifts') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Shifts</span>
                     </a>
 
-                    <!-- Facility -->
-                    <a href="{{ route('pages.facilities') }}"
-                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.facilities') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
-                        <div class="w-6 h-6 mr-4 flex items-center justify-center">
-                            <img src="{{ asset('images/UsersFour.svg') }}"
-                                class="{{ Request::routeIs('pages.facilities') ? 'hidden' : 'block' }} group-hover:hidden" />
-                            <img src="{{ asset('images/black-UsersFour.svg') }}"
-                                class="{{ Request::routeIs('pages.facilities') ? 'block' : 'hidden' }} group-hover:block" />
-                        </div>
-                        <span
-                            class="{{ Request::routeIs('pages.facilities') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Facility</span>
-                    </a>
+
 
                     <a href="{{ route('pages.reports') }}"
                         class="flex items-center px-4 py-3 {{ Request::routeIs('pages.reports') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
@@ -126,47 +114,7 @@
         <div class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden" id="sidebar-overlay"></div>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col min-w-0">
-            <!-- Header -->
-            <header class=" border-b border-gray-200 px-4 lg:px-6 py-5">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-4">
-                        <!-- Mobile menu button -->
-                        <button
-                            class="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                            id="mobile-menu-button">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-
-                        <div class="flex items-center space-x-2">
-                            <div class=" text-zinc-900 text-2xl font-bold  leading-7">
-                                Welcome</div>
-
-                            <img src="{{ asset('images/right-arrow.svg') }}" alt="right arrow" class="ml-8" />
-                            <div class="justify-start text-zinc-950 text-sm font-normal leading-tight">
-                                May 19, 2025</div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-3">
-                        <img src="{{ asset('images/notification.svg') }}" alt="notification" />
-                        <div class="relative hidden sm:block ml-6">
-                            <div
-                                class="pl-8 w-[400px] pr-6 py-3 bg-white rounded-xl shadow-[0px_26px_26px_0px_rgba(106,22,58,0.04)]">
-                                <input type="text" placeholder="Search here" class="outline-none w-full pr-6">
-                                <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                                    <img src="{{ asset('images/search.svg') }}" />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
-
+        <div class="flex-1 flex flex-col min-w-0 ">
             <!-- Main Content Area -->
             @yield('content')
         </div>

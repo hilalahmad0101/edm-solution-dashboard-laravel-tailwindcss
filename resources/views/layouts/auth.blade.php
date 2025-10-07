@@ -76,6 +76,20 @@
                     </a>
 
 
+                    <!-- Payments -->
+                    <a href="{{ route('pages.payments') }}"
+                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.payments') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
+                        <div class="w-6 h-6 mr-4 flex items-center justify-center">
+                            <img src="{{ asset('images/briefcase.svg') }}"
+                                class="{{ Request::routeIs('pages.payments') ? 'hidden' : 'block' }} group-hover:hidden" />
+                            <img src="{{ asset('images/black-briefcase.svg') }}"
+                                class="{{ Request::routeIs('pages.payments') ? 'block' : 'hidden' }} group-hover:block" />
+                        </div>
+                        <span
+                            class="{{ Request::routeIs('pages.payments') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Payments</span>
+                    </a>
+
+
 
                     <a href="{{ route('pages.reports') }}"
                         class="flex items-center px-4 py-3 {{ Request::routeIs('pages.reports') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
@@ -87,6 +101,18 @@
                         </div>
                         <span
                             class="{{ Request::routeIs('pages.reports') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Report</span>
+                    </a>
+
+                    <a href="{{ route('pages.support') }}"
+                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.support') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
+                        <div class="w-6 h-6 mr-4 flex items-center justify-center">
+                            <img src="{{ asset('images/FileText.svg') }}"
+                                class="{{ Request::routeIs('pages.support') ? 'hidden' : 'block' }} group-hover:hidden" />
+                            <img src="{{ asset('images/black-FileText.svg') }}"
+                                class="{{ Request::routeIs('pages.support') ? 'block' : 'hidden' }} group-hover:block" />
+                        </div>
+                        <span
+                            class="{{ Request::routeIs('pages.support') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Support</span>
                     </a>
                 </div>
             </nav>
@@ -119,6 +145,8 @@
             @yield('content')
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
 
     <script>
         // Mobile menu functionality
@@ -142,6 +170,8 @@
             }
         });
     </script>
+
+    @stack('scripts')
 </body>
 
 </html>

@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div>
-                <x-button title="Add User"
+                <x-button title="Add Shift"
                     icon='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
@@ -92,7 +92,7 @@
                         </td>
                         <td class="px-6 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
                             <div class="bg-[#F3E8FF] px-2 py-1 text-[#6E11B0] rounded-xl">
-                                Active
+                                Confirmed
                             </div>
                         </td>
                         <td
@@ -125,7 +125,7 @@
                         </td>
                         <td class="px-6 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
                             <div class="bg-[#F3E8FF] px-2 py-1 text-[#6E11B0] rounded-xl">
-                                Active
+                                Confirmed
                             </div>
                         </td>
                         <td
@@ -158,7 +158,7 @@
                         </td>
                         <td class="px-6 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
                             <div class="bg-[#F3E8FF] px-2 py-1 text-[#6E11B0] rounded-xl">
-                                Active
+                                Confirmed
                             </div>
                         </td>
                         <td
@@ -191,7 +191,7 @@
                         </td>
                         <td class="px-6 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
                             <div class="bg-[#F3E8FF] px-2 py-1 text-[#6E11B0] rounded-xl">
-                                Active
+                                Confirmed
                             </div>
                         </td>
                         <td
@@ -224,7 +224,7 @@
                         </td>
                         <td class="px-6 py-3 text-left text-[15px] font-medium text-[#0A0A0A] capitalize tracking-wider">
                             <div class="bg-[#F3E8FF] px-2 py-1 text-[#6E11B0] rounded-xl">
-                                Active
+                                Confirmed
                             </div>
                         </td>
                         <td

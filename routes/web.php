@@ -19,3 +19,4 @@ Route::view('/credential', 'pages.admin.credential')->name('pages.credential');
 Route::view('/shifts', 'pages.admin.shifts')->name('pages.shifts');
 Route::view('/reports', 'pages.admin.reports')->name('pages.reports');
 Route::view('/support', 'pages.admin.support')->name('pages.support');
+Route::view('/notification', 'pages.admin.notification')->name('pages.notification');

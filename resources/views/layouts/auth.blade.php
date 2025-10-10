@@ -12,16 +12,21 @@
 <body class="bg-[#F4F5F7] font-sans overflow-hidden">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-[300px] bg-[#1F3C88] text-white p-4 flex flex-col shadow-lg relative lg:relative lg:translate-x-0 transition-transform duration-300 ease-in-out"
+        <div class="fixed lg:relative w-[300px] bg-[#1F3C88] text-white p-4 flex flex-col shadow-lg z-50 h-full -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out"
             id="sidebar">
+            <!-- Close button for mobile -->
+            <button class="lg:hidden absolute top-4 right-4 text-white" id="close-sidebar">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
             <!-- Logo/Header -->
             <div class="pb-4">
-                <div class="text-left justify-start text-white text-2xl font-extrabold  leading-loose tracking-widest">
+                <div class="text-left justify-start text-white text-2xl font-extrabold leading-loose tracking-widest">
                     EDM Solution</div>
             </div>
 
             <!-- Navigation Menu -->
-            <nav class="flex-1">
+            <nav class="flex-1 overflow-y-auto">
                 <div class="space-y-4">
                     <!-- Dashboard -->
                     <a href="{{ route('pages.dashboard') }}"
@@ -75,7 +80,6 @@
                             class="{{ Request::routeIs('pages.shifts') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Shifts</span>
                     </a>
 
-
                     <!-- Payments -->
                     <a href="{{ route('pages.payments') }}"
                         class="flex items-center px-4 py-3 {{ Request::routeIs('pages.payments') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
@@ -88,8 +92,6 @@
                         <span
                             class="{{ Request::routeIs('pages.payments') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Payments</span>
                     </a>
-
-
 
                     <a href="{{ route('pages.reports') }}"
                         class="flex items-center px-4 py-3 {{ Request::routeIs('pages.reports') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
@@ -114,6 +116,18 @@
                         <span
                             class="{{ Request::routeIs('pages.support') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Support</span>
                     </a>
+
+                    <a href="{{ route('pages.notification') }}"
+                        class="flex items-center px-4 py-3 {{ Request::routeIs('pages.notification') ? 'bg-white' : '' }} text-gray-200 hover:bg-white hover:text-black rounded transition-colors duration-200 group">
+                        <div class="w-6 h-6 mr-4 flex items-center justify-center">
+                            <img src="{{ asset('images/FileText.svg') }}"
+                                class="{{ Request::routeIs('pages.notification') ? 'hidden' : 'block' }} group-hover:hidden" />
+                            <img src="{{ asset('images/black-FileText.svg') }}"
+                                class="{{ Request::routeIs('pages.notification') ? 'block' : 'hidden' }} group-hover:block" />
+                        </div>
+                        <span
+                            class="{{ Request::routeIs('pages.notification') ? 'text-black' : 'text-white' }} group-hover:text-black text-base font-semibold leading-normal">Notification</span>
+                    </a>
                 </div>
             </nav>
 
@@ -124,33 +138,40 @@
                     <div class="w-6 h-6 mr-4 flex items-center justify-center">
                         <img src="{{ asset('images/logout.svg') }}" />
                     </div>
-                    <span
-                        class="text-white group-hover:text-black text-base font-semibold  leading-normal">Logout</span>
+                    <span class="text-white group-hover:text-black text-base font-semibold leading-normal">Logout</span>
                 </button>
             </div>
 
             <!-- User Info at Bottom -->
             <div class="p-4 bg-opacity-50">
-                <div class=" text-white text-base font-semibold leading-normal">Alexander Smith</div>
-
+                <div class="text-white text-base font-semibold leading-normal">Alexander Smith</div>
             </div>
         </div>
 
         <!-- Mobile overlay -->
-        <div class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden" id="sidebar-overlay"></div>
+        <div class="fixed inset-0 bg-black/20 z-40 lg:hidden hidden" id="sidebar-overlay"></div>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col min-w-0 ">
+        <div class="flex-1 flex flex-col min-w-0">
+            <!-- Top Header with Mobile Menu Button -->
+            <div class="lg:hidden bg-white shadow-sm p-4 flex items-center justify-between">
+                <button class="text-gray-600" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="text-[#1F3C88] text-xl font-bold">EDM Solution</div>
+                <div class="w-8"></div> <!-- Spacer for centering -->
+            </div>
+
             <!-- Main Content Area -->
             @yield('content')
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
-
     <script>
         // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeSidebarButton = document.getElementById('close-sidebar');
         const sidebar = document.getElementById('sidebar');
         const sidebarOverlay = document.getElementById('sidebar-overlay');
 
@@ -159,8 +180,17 @@
             sidebarOverlay.classList.toggle('hidden');
         }
 
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-        sidebarOverlay.addEventListener('click', toggleMobileMenu);
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        }
+
+        if (closeSidebarButton) {
+            closeSidebarButton.addEventListener('click', toggleMobileMenu);
+        }
+
+        if (sidebarOverlay) {
+            sidebarOverlay.addEventListener('click', toggleMobileMenu);
+        }
 
         // Close mobile menu on window resize
         window.addEventListener('resize', () => {

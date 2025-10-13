@@ -8,7 +8,7 @@
         <h1 class="text-3xl font-bold mb-8 text-black">Dashboard</h1>
 
         <!-- Top Stats Cards -->
-        <div class="grid grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <!-- Shifts Today -->
             <div
                 class="bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Action Buttons -->
-        <div class="grid grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <button
                 class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 <span class="flex items-center justify-center">
@@ -112,7 +112,7 @@
         </div>
 
         <!-- Charts Row -->
-        <div class="grid grid-cols-2 gap-6 mb-8">
+        <div class="grid  grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <!-- Shift Fill Rate -->
             <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 shadow-lg">
                 <h3 class="text-base font-semibold mb-4 text-gray-800">Shift Fill Rate</h3>
@@ -136,7 +136,7 @@
         </div>
 
         <!-- Bottom Row -->
-        <div class="grid grid-cols-2 gap-6 mb-8">
+        <div class="grid  grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <!-- Real-Time Alerts -->
             <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 shadow-lg">
                 <h3 class="text-base font-semibold mb-4 text-gray-800 flex items-center">

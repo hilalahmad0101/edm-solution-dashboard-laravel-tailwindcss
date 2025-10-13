@@ -9,7 +9,7 @@ Route::view('/login', 'pages.auth.login')->name('pages.login');
 Route::view('/forget-password', 'pages.auth.forget-password')->name('pages.forget-password');
 
 
-Route::view('/dashboard', 'pages.admin.dashboard2')->name('pages.dashboard');
+Route::view('/dashboard', 'pages.admin.dashboard3')->name('pages.dashboard');
 Route::view('/user', 'pages.admin.user')->name('pages.user');
 Route::view('/facilities', 'pages.admin.facilities')->name('pages.facilities');
 Route::view('/pending-facilities', 'pages.admin.pending-facilities')->name('pages.pending-facilities');

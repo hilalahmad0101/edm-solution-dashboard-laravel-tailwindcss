@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.auth.welcome')->name('pages.welcome');
 Route::view('/register', 'pages.auth.register')->name('pages.register');
-Route::view('/login', 'pages.auth.login')->name('pages.login');
+Route::view('in', 'pages.auth.login')->name('pages.login');
 Route::view('/forget-password', 'pages.auth.forget-password')->name('pages.forget-password');
 
 
@@ -24,5 +24,8 @@ Route::view('/shifts', 'pages.admin.shifts')->name('pages.shifts');
 Route::view('/calender-view', 'pages.admin.calender-view')->name('pages.calender-view');
 Route::view('/open-shifts', 'pages.admin.open-shifts')->name('pages.open-shifts');
 Route::view('/reports', 'pages.admin.reports')->name('pages.reports');
+Route::view('/document', 'pages.admin.document')->name('pages.document');
 Route::view('/support', 'pages.admin.support')->name('pages.support');
 Route::view('/notification', 'pages.admin.notification')->name('pages.notification');
+Route::view('/audit-log', 'pages.admin.audit-log')->name('pages.audit-log');
+Route::view('/setting', 'pages.admin.setting')->name('pages.setting');

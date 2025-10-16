@@ -11,7 +11,7 @@
                 <p class="text-gray-500 text-base">Send and manage system notifications to users</p>
             </div>
             <div>
-                <button
+                <button onclick="openModal()"
                     class="bg-black text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
                         class="w-5 h-5">
@@ -289,5 +289,99 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div id="notificationModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 transform transition-all">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <h2 class="text-xl font-bold text-gray-900">Send New Notification</h2>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 space-y-5">
+                    <!-- Notification Type -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Notification Type</label>
+                        <select
+                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                            <option>Push Notification</option>
+                            <option>Email Alert</option>
+                            <option>SMS Alert</option>
+                        </select>
+                    </div>
+
+                    <!-- Audience -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Audience</label>
+                        <select
+                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                            <option>All Users</option>
+                            <option>Premium Users</option>
+                            <option>Free Users</option>
+                            <option>Specific Group</option>
+                        </select>
+                    </div>
+
+                    <!-- Title -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Title</label>
+                        <input type="text" placeholder="Enter notification title..."
+                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all">
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" placeholder="Enter your message here..."
+                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all resize-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="flex items-center justify-end gap-3 p-6 border-t border-gray-200">
+                    <button onclick="closeModal()"
+                        class="px-5 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all">
+                        Cancel
+                    </button>
+                    <button
+                        class="px-5 py-2.5 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-all flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                        </svg>
+                        Send Now
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('notificationModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('notificationModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('notificationModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
 @endsection

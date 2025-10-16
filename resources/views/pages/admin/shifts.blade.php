@@ -40,6 +40,8 @@
             </select>
         </div>
 
+
+
         <!-- Table Container -->
         <div class="overflow-x-auto border border-gray-200 rounded-xl bg-white shadow-sm">
             <div class="p-6 border-b border-gray-200">
@@ -136,6 +138,26 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- Real-time Clock Status -->
+        <div class="my-6 border border-gray-200 rounded-xl bg-white shadow-sm p-6">
+            <h3 class="text-sm font-medium text-gray-700 mb-4">Real-time Clock Status</h3>
+            <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 flex items-start justify-between">
+                <div class="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <div>
+                        <p class="text-sm font-medium text-gray-900">Michael Chen - City Medical Center</p>
+                        <p class="text-xs text-gray-500 mt-1">Clocked in at 12:02 PM</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 bg-blue-600 text-white rounded-md text-xs font-medium whitespace-nowrap">In
+                    Progress</span>
             </div>
         </div>
     </main>

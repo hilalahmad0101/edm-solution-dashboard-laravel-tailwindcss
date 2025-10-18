@@ -104,6 +104,18 @@
                         <i class="fas fa-clipboard-check w-4 text-sm mr-3"></i>
                         <span class="text-sm">Compliance</span>
                     </a>
+                    <!-- shift orchestration -->
+                    <a href="/shift-orchestration"
+                        class="flex items-center px-3 py-2.5 text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                        <i class="fas fa-clipboard-check w-4 text-sm mr-3"></i>
+                        <span class="text-sm">Shift Orchestration</span>
+                    </a>
+                    <!-- time sheet -->
+                    <a href="/time-sheet"
+                        class="flex items-center px-3 py-2.5 text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                        <i class="fas fa-clipboard-check w-4 text-sm mr-3"></i>
+                        <span class="text-sm">Timesheet Exceptions</span>
+                    </a>
 
                     <!-- Payroll & Billing -->
                     <a href="{{ route('pages.payments') }}"

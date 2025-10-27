@@ -6,14 +6,14 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class EmailVerificationRequest extends FormRequest
+class ChangePasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return !auth()->check();
+        return auth()->check();
     }
 
     /**
@@ -24,18 +24,21 @@ class EmailVerificationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'code' => ['required', 'integer', 'min:4', 'exists:users,code'],
-            'forget_password' => ['nullable', 'boolean']
+            'old_password' => 'required',
+            'password' => 'required|confirmed|min:8',
         ];
     }
 
-    protected function failedValidation(Validator $validator)
+    public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(
-            response()->json([
-                'success' => false,
-                'message' => $validator->errors()->all(),
-            ], 422)
+            response()->json(
+                [
+                    'message' => $validator->errors()->all(),
+                    'success' => false
+                ],
+                422
+            )
         );
     }
 }

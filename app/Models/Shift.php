@@ -12,4 +12,15 @@ class Shift extends Model
     protected $table = 'shifts';
 
     protected $guarded = [];
+
+    public function claimShift()
+    {
+        return $this->hasOne(ClaimShift::class, 'shift_id');
+    }
+
+
+    public function confirmVerification()
+    {
+        return $this->hasOne(ConfirmVerification::class, 'shift_id');
+    }
 }

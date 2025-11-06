@@ -65,5 +65,5 @@ jobs:
             Status: ${{ job.status }}
             Commit: ${{ github.sha }}
             Details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: stackf63@gmail.com
+          to: stackf63@gmail.com, saddamkhoso203@gmail.com
           from: GitHub Actions <stackf63@gmail.com>

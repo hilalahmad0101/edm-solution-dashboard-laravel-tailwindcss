@@ -1,12 +1,20 @@
 <?php
 
+use App\Http\Controllers\Admin\ShiftController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::view('/', 'pages.auth.welcome')->name('pages.welcome');
 Route::view('/register', 'pages.auth.register')->name('pages.register');
-Route::view('in', 'pages.auth.login')->name('pages.login');
+Route::view('login', 'pages.auth.login')->name('pages.login');
 Route::view('/forget-password', 'pages.auth.forget-password')->name('pages.forget-password');
+
+Route::controller(ShiftController::class)->group(function () {
+    Route::get('shifts', 'index')->name('pages.shifts');
+    Route::patch('shifts/approved/{id}', 'approved')->name('pages.shifts.approve');
+    Route::patch('shifts/cancel/{id}', 'cancelled')->name('pages.shifts.cancel');
+    Route::patch('shifts/delete/{id}', 'delete')->name('pages.shifts.delete');
+});
 
 
 Route::view('/dashboard', 'pages.admin.dashboard4')->name('pages.dashboard');
@@ -21,7 +29,7 @@ Route::view('/pending-compliance', 'pages.admin.pending-compliance')->name('page
 Route::view('/expire-soon', 'pages.admin.expire-soon')->name('pages.expire-soon');
 Route::view('/expired', 'pages.admin.expired')->name('pages.expired');
 Route::view('/credential', 'pages.admin.credential')->name('pages.credential');
-Route::view('/shifts', 'pages.admin.shifts')->name('pages.shifts');
+// Route::view('/shifts', 'pages.admin.shifts')->name('pages.shifts');
 Route::view('/calender-view', 'pages.admin.calender-view')->name('pages.calender-view');
 Route::view('/open-shifts', 'pages.admin.open-shifts')->name('pages.open-shifts');
 Route::view('/reports', 'pages.admin.reports')->name('pages.reports');

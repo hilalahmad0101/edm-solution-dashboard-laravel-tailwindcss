@@ -201,6 +201,13 @@ class AuthController extends Controller
                     'message' => ['Email not verified'],
                 ]);
             }
+
+            if ($user->role != $validated['role']) {
+                return response()->json([
+                    'success' => false,
+                    'message' => ['Your account is not registered to this ' . $validated['role']]
+                ]);
+            }
             $token = $user->createToken('auth_token')->plainTextToken;
             return response()->json([
                 'success' => true,

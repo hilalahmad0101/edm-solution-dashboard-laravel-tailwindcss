@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('shifts', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('start_date');
-            $table->string('end_date');
-            $table->string('per_hour');
-            $table->string('location');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->date('date');
+            $table->double('pay_per_hour');
+            $table->time('start_time');
+            $table->time('end_time');
+            $table->text('license_type');
+            $table->text('special_instruction');
+            $table->text('location');
             $table->integer('status')->default(0);
             $table->timestamps();
         });

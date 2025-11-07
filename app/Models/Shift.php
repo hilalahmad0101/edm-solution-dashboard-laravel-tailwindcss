@@ -23,4 +23,9 @@ class Shift extends Model
     {
         return $this->hasOne(ConfirmVerification::class, 'shift_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

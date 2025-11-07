@@ -13,4 +13,14 @@ class ClaimShift extends Model
     protected $table = 'claim_shifts';
 
     protected $guarded = [];
+
+    public function shift()
+    {
+        return $this->belongsTo(Shift::class, 'shift_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

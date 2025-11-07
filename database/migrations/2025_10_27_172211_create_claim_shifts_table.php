@@ -15,7 +15,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('shift_id')->constrained('shifts')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->string('status');
+            $table->time('start_time');
+            $table->time('end_time');
+            // $table->date('date');
+            $table->time('check_in')->default('00:00:00');
+            $table->time('check_out')->default('00:00:00');
+            $table->string('location')->nullable();
             $table->timestamps();
         });
     }

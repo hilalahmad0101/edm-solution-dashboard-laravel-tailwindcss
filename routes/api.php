@@ -1,6 +1,8 @@
 
 <?php
 
+use App\Http\Controllers\Facility\HomeController as FacilityHomeController;
+use App\Http\Controllers\Facility\ShiftController;
 use App\Http\Controllers\User\Api\AuthController;
 use App\Http\Controllers\User\Api\HomeController;
 use App\Http\Controllers\User\Api\ProfileController;
@@ -23,22 +25,42 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::controller(AuthController::class)->group(function () {
-        Route::post('upload/document', 'uploadDocument');
-        Route::post('reset-password', 'resetPassword');
+    Route::middleware(['worker.mode'])->group(function () {
+        Route::controller(AuthController::class)->group(function () {
+            Route::post('upload/document', 'uploadDocument');
+            Route::post('reset-password', 'resetPassword');
+        });
+        Route::controller(HomeController::class)->group(function () {
+            Route::get('/get/shifts', 'shifts');
+            Route::get('/get/shifts/{id}', 'shiftDetails');
+            Route::post('/claim-shift', 'claimShift');
+            Route::get('/get/claimed-shift', 'getClaimedShift');
+            Route::post('/shift-check-in', 'checkInShift');
+            Route::post('/confirm-verification', 'confirmVerification');
+            Route::post('/checkout-shift', 'checkOutShift');
+        });
+        Route::controller(ProfileController::class)->group(function () {
+            Route::post('/profile/update', 'updateProfile');
+            Route::post('/profile/change/password', 'changePassword');
+            // Route::post('/claim-shift', 'claimShift');
+            // Route::post('/confirm-verification', 'confirmVerification');
+            // Route::post('/checkout-shift', 'checkOutShift');
+        });
     });
-    Route::controller(HomeController::class)->group(function () {
-        Route::get('/get/shifts', 'shifts');
-        Route::get('/get/shifts/{id}', 'shiftDetails');
-        Route::post('/claim-shift', 'claimShift');
-        Route::post('/confirm-verification', 'confirmVerification');
-        Route::post('/checkout-shift', 'checkOutShift');
-    });
-    Route::controller(ProfileController::class)->group(function () {
-        Route::post('/profile/update', 'updateProfile');
-        Route::post('/profile/change/password', 'changePassword');
-        // Route::post('/claim-shift', 'claimShift');
-        // Route::post('/confirm-verification', 'confirmVerification');
-        // Route::post('/checkout-shift', 'checkOutShift');
+
+    Route::middleware(['facility.mode'])->group(function () {
+        Route::controller(ShiftController::class)->group(function () {
+            Route::get('/facility/get/shifts', 'getShift');
+            Route::post('/create/shift', 'createShift');
+            Route::post('/create/update/{id}', 'updateShift');
+            Route::get('/delete/shift/{id}', 'deleteShift');
+        });
+
+        Route::controller(FacilityHomeController::class)->group(function () {
+            Route::get('get/shifts-group', 'getShifts');
+            Route::get('accept-pending-shift/{id}', 'acceptPendingShift');
+            Route::get('filled-shift-details', 'filledShiftDetails');
+            Route::get('get/complete-shift-summary/{id}', 'getCompleteShiftSummary');
+        });
     });
 });

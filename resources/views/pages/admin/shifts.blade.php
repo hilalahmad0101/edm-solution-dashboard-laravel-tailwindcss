@@ -24,7 +24,8 @@
 
         <div class="px-6 py-5 flex items-center gap-4 border border-gray-200 rounded-xl bg-white shadow-sm mb-6">
             <div class="relative flex-1">
-                <input type="text" placeholder="Search by name or email..."
+                <input type="text" placeholder="Search by license_type or special_instruction or location..."
+                    value="{{ request()->search }}"
                     class="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                 <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24">
@@ -35,9 +36,17 @@
             <select
                 class="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all min-w-[180px]">
                 <option value="">All Statuses</option>
-                <option value="confirmed">Confirmed</option>
+                <option value="Opened">Confirmed</option>
                 <option value="pending">Pending</option>
             </select>
+            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Search
+            </button>
+
+            <a href="{{ route('pages.shifts') }}"
+                class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors">
+                Reset
+            </a>
         </div>
 
 

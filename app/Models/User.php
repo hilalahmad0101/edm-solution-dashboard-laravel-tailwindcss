@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(ClaimShift::class, 'user_id');
     }
+
+    public function activeShifts()
+    {
+        return $this->hasMany(Shift::class, 'user_id')->where('status', 1);
+    }
 }

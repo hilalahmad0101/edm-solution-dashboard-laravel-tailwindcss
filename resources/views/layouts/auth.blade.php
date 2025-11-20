@@ -43,18 +43,17 @@
                     </a>
 
                     <!-- Users -->
-                    <a href="{{ route('pages.user') }}"
-                        class="flex items-center justify-between px-3 py-2.5 {{ Request::routeIs('pages.user') ? 'bg-[#3d5a9e]' : 'hover:bg-white/5' }} text-white rounded-lg transition-all duration-200 group">
+                    <a href="{{ route('admin.users.index') }}"
+                        class="flex items-center justify-between px-3 py-2.5 {{ Request::routeIs('admin.users.*') ? 'bg-[#3d5a9e]' : 'hover:bg-white/5' }} text-white rounded-lg transition-all duration-200 group">
                         <div class="flex items-center">
                             <i class="fas fa-users w-4 text-sm mr-3"></i>
                             <span class="text-sm">Users</span>
                         </div>
-                        <i class="fas fa-chevron-right text-xs opacity-50"></i>
                     </a>
 
                     <!-- Facilities -->
-                    <a href="{{ route('pages.facilities') }}"
-                        class="flex items-center px-3 py-2.5 {{ Request::routeIs('pages.facilities') ? 'bg-[#3d5a9e]' : 'hover:bg-white/5' }} text-white rounded-lg transition-all duration-200">
+                    <a href="{{ route('admin.facilities.index') }}"
+                        class="flex items-center px-3 py-2.5 {{ Request::routeIs('admin.facilities.*') ? 'bg-[#3d5a9e]' : 'hover:bg-white/5' }} text-white rounded-lg transition-all duration-200">
                         <i class="fas fa-building w-4 text-sm mr-3"></i>
                         <span class="text-sm">Facilities</span>
                     </a>
@@ -78,9 +77,9 @@
                             <a href="/shifts"
                                 class="flex items-center px-3 py-2 text-gray-300 hover:text-white text-sm rounded-lg hover:bg-white/5 transition-all duration-200">
                                 <i class="fas fa-plus text-xs mr-2 w-3"></i>
-                                <span class="text-xs">Create Shift</span>
+                                <span class="text-xs">All Shift</span>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('admin.approved.shifts') }}"
                                 class="flex items-center px-3 py-2 text-gray-300 hover:text-white text-sm rounded-lg hover:bg-white/5 transition-all duration-200">
                                 <i class="fas fa-check text-xs mr-2 w-3"></i>
                                 <span class="text-xs">Approve Shifts</span>
